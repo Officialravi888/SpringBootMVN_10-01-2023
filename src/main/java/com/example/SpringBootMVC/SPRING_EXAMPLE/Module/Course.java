@@ -1,17 +1,17 @@
-package com.example.SpringBootMVC.SPRING_EXAMPLE.Controllar;
+package com.example.SpringBootMVC.SPRING_EXAMPLE.Module;
 
 public class Course {
     private long id;
     private String title;
-    private String Description;
+    private String description;
 
     public Course(long id, String title, String description) {
         this.id = id;
         this.title = title;
-        Description = description;
+        this.description = description;
     }
     public Course(){
-
+        super();
     }
 
     public long getId() {
@@ -31,10 +31,19 @@ public class Course {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
