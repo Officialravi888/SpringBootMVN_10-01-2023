@@ -16,6 +16,7 @@ public class MyController {
         return "Welcome to Spring boot";
     }
     @GetMapping("/courses")
+    //@RequestMapping(Path=”/Courses”,method=RequestMethod.GET)
     public List<Course> getCourses()
     {
         return this.courseService.getCourses();
